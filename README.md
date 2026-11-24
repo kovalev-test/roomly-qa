@@ -1,5 +1,11 @@
 # Тестовое задание для QA Engineer
 
+## Результаты проверки
+
+- [Приоритетный чек-лист, пять дефектов и ограничения проверки](qa/REPORT.md).
+- [Три сценария на Python + Playwright](tests/test_booking.py) и [smoke-тест из каркаса](tests/test_smoke.py).
+- Последний прогон на опубликованном стенде — `3 passed, 1 xfailed`. Ожидаемое падение соответствует BUG-01.
+
 Тестируемая страница: <https://rcsi-science.github.io/demo-roomly/>
 
 Каркас для автоматизации находится в корне репозитория.
@@ -40,7 +46,7 @@ docker compose run --build --rm tests
 ```bash
 python -m pip install -r requirements.txt
 python -m playwright install chromium
-python -m pytest
+python -m pytest --base-url https://rcsi-science.github.io/demo-roomly/
 ```
 
 ## Ожидаемое поведение
